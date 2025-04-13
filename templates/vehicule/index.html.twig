@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GESTOCK{% endblock %}
+
+{% block body %}
+<h1>Liste des véhicules</h1>
+{% for message in app.flashes('message') %}
+	<div class="flash-notice">
+		{{ message }}
+	</div>
+	{% endfor %}
+
+
+
+{% endblock %}
