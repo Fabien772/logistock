@@ -1,15 +1,80 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}GESTOCK{% endblock %}
+{% block title %}GESTOCK
+{% endblock %}
 
 {% block body %}
-<h1>Liste des véhicules</h1>
-{% for message in app.flashes('message') %}
-	<div class="flash-notice">
-		{{ message }}
-	</div>
+	<h1>Liste des véhicules</h1>
+	{% for message in app.flashes('message') %}
+		<div class="flash-notice">
+			{{ message }}
+		</div>
 	{% endfor %}
 
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th scope="col"></th>
+				<th scope="col">Marque</th>
+				<th scope="col">Modèle</th>
+				<th scope="col">Immatriculation</th>
+				<th scope="col">Attribution</th>
+				<th scope="col">Place</th>
+				<th scope="col">Equipement Police</th>
+				<th scope="col">Prêt</th>
+				<th scope="col">Situation</th>
+				<th scope="col">Date acquisition</th>
+				<th scope="col">Commentaire</th>
+				<th scope="col">Date CT</th>
+
+
+			</tr>
+		</thead>
+		<tbody class="table-dark">
+			{% for vehicule in vehicles %}
+
+
+				<tr>
+					<th scope="row"></th>
+					<td>{{vehicule.marque}}</td>
+
+					<td>{{vehicule.modele}}</td>
+
+					<td>{{vehicule.immat}}</td>
+
+					<td>{{vehicule.attribution}}</td>
+
+					<td>{{vehicule.numeroPlace}}</td>
+
+					<td>
+						{% if vehicule.equipementPolice %}
+							<span class="badge text-bg-success">oui</span>
+						{% else %}
+							<span class="badge text-bg-danger">non</span>
+						{% endif %}
+					</td>
+
+					<td>
+						{% if vehicule.pret %}
+							<span class="badge text-bg-success">disponible</span>
+						{% else %}
+							<span class="badge text-bg-danger">indisponible</span>
+						{% endif %}
+					</td>
+
+					<td>{{vehicule.situation}}</td>
+
+					<td>{{vehicule.dateAcquisition|date('d-m-Y')}}
+					</td>
+
+					<td>{{vehicule.comment}}</td>
+
+					<td>{{vehicule.dateCT|date('d-m-Y')}}</td>
+
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 
 
 {% endblock %}

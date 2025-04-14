@@ -84,7 +84,7 @@
     "PLACE": "21",
     "Equipement police": "",
     "Commentaire": "",
-    "PRET": "VL dispo au pret",
+    "PRET": "",
     "SITUATION": "en réparation 26/02/25"
   },
   {
@@ -106,7 +106,7 @@
     "PLACE": "19",
     "Equipement police": "",
     "Commentaire": "Affectation conseiller a�ronautique",
-    "PRET": "VL dispo au pret",
+    "PRET": "",
     "SITUATION": ""
   },
   {
@@ -139,7 +139,7 @@
     "PLACE": "",
     "Equipement police": "",
     "Commentaire": "",
-    "PRET": "VL dispo au pret",
+    "PRET": "",
     "SITUATION": "En pret LLEDO"
   },
   {
@@ -150,7 +150,7 @@
     "PLACE": "",
     "Equipement police": "",
     "Commentaire": "A récupérer à pantin en échange de DY-135-MF",
-    "PRET": "VL dispo au pret",
+    "PRET": "",
     "SITUATION": "A récupérer"
   },
   {

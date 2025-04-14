@@ -60,6 +60,9 @@ class Vehicle
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $numeroPlace = null;
 
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
+    private ?\DateTimeInterface $dateCT = null;
+
     public function __construct()
     {
         $this->reservations = new ArrayCollection();
@@ -205,6 +208,8 @@ class Vehicle
         return $this->DateAcquisition;
     }
 
+    
+
     public function setDateAcquisition(\DateTimeInterface $DateAcquisition): static
     {
         $this->DateAcquisition = $DateAcquisition;
@@ -220,6 +225,22 @@ class Vehicle
     public function setNumeroPlace(?string $numeroPlace): static
     {
         $this->numeroPlace = $numeroPlace;
+
+        return $this;
+    }
+
+    public function getDateCT(): ?\DateTimeInterface
+    {
+        return $this->dateCT;
+    }
+
+
+        
+    
+
+    public function setDateCT(?\DateTimeInterface $dateCT): static
+    {
+        $this->dateCT = $dateCT;
 
         return $this;
     }
