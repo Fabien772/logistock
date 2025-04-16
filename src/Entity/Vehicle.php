@@ -54,14 +54,16 @@ class Vehicle
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $comment = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $DateAcquisition = null;
+    
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $numeroPlace = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateCT = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
+    private ?\DateTimeInterface $dateAcquisition = null;
 
     public function __construct()
     {
@@ -203,19 +205,7 @@ class Vehicle
         return $this;
     }
 
-    public function getDateAcquisition(): ?\DateTimeInterface
-    {
-        return $this->DateAcquisition;
-    }
-
-    
-
-    public function setDateAcquisition(\DateTimeInterface $DateAcquisition): static
-    {
-        $this->DateAcquisition = $DateAcquisition;
-
-        return $this;
-    }
+   
 
     public function getNumeroPlace(): ?string
     {
@@ -241,6 +231,18 @@ class Vehicle
     public function setDateCT(?\DateTimeInterface $dateCT): static
     {
         $this->dateCT = $dateCT;
+
+        return $this;
+    }
+
+    public function getDateAcquisition(): ?\DateTimeInterface
+    {
+        return $this->dateAcquisition;
+    }
+
+    public function setDateAcquisition(?\DateTimeInterface $dateAcquisition): static
+    {
+        $this->dateAcquisition = $dateAcquisition;
 
         return $this;
     }

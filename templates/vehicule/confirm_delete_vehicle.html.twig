@@ -1,0 +1,22 @@
+{# templates/vehicle/confirm_delete.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h2>Confirmer la suppression</h2>
+        <p>Êtes-vous sûr de vouloir supprimer le véhicule "{{ vehicle.marque }} {{ vehicle.modele }}" ?</p>
+        
+        <form method="post" action="{{ path('vehicle_delete', {'id':vehicle.id}) }}">
+            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ vehicle.id) }}">
+            
+            <button type="submit" class="btn btn-danger">
+                Oui, supprimer
+            </button>
+            
+            <a href="{{ path('app_vehicule') }}" class="btn btn-secondary">
+                Non, annuler
+            </a>
+        </form>
+    </div>
+{% endblock %}
