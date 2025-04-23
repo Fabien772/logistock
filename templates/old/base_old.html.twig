@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Logistock</title>
+
+		{% block stylesheets %}{% endblock %}
+
+		<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
+		<link href="{{ asset('assets/css/bootstrap-icons.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('assets/css/all.min.css') }}" rel="stylesheet">
+
+		<body>
+			<!-- Nav -->
+
+			<div class="container-fluid">
+				<div class="row fixed-top">
+
+					<header>
+
+						<div onclick="window.location.href='{{path('app_index')}}'" class="logo">LOGISTOCK</div>
+
+
+						{% for message in app.flashes('message') %}
+
+							<div class=" alert-success font-custom-alert " role="alert">
+								{{ message }}
+							</div>
+
+
+							<div class="row">
+								<div class="col ">
+									{%if titre is defined %}
+										<h7 class="border border-light pt-2 pb-2 ps-5 pe-5 ">{{titre}}</h7>
+									{% endif %}
+								</div>
+								{% for message in app.flashes('message') %}
+
+									<div class="col text-center tagline alert-success font-custom-alert " role="alert">
+										{{ message }}
+									</div>
+								{% else %}
+									<div class="col text-center tagline">Gestion intégrée de matériel</div>
+
+								{% endif %}
+								<div class="col">
+
+									{% if create_vehicle is defined %}
+										<div class="col ">
+											<h7 class="btn-pulse-create border border-light rounded-pill p-2 ">
+												<a href="{{path('app_create_vehicle')}}">{{create_vehicle}}<img src="{{ asset('icons/plus.svg') }}" alt="Icône + " width="40" height="20"></a>
+											</h7>
+										</div>
+
+									{% endif %}
+								</div>
+							</div>
+
+
+						{% endfor %}
+
+					</header>
+
+				</div>
+			</div>
+		</body>
+
+
+		{% block body %}{% endblock %}
+
+
+		<!-- FOOTER -->
+
+		<div class="container-fluid ">
+			<div class="row ">
+				<footer>
+					<div>© 2017–2025 Company, Inc. • Confidentialité • Conditions</div>
+					<a href="#" class="back-to-top">Retour en haut
+						<i class="fas fa-arrow-up"></i>
+					</a>
+				</footer>
+			</div>
+		</div>
+
+
+		{% block javascripts %}{% endblock %}
+		<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+		<script src="{{ asset('assets/js/global.js') }}"></script>
+	</head>
+</html></body>

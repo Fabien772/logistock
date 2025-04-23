@@ -31,13 +31,14 @@ class ReservationRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Reservation
-    //    {
-    //        return $this->createQueryBuilder('r')
-    //            ->andWhere('r.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+     /*  public function findAvailableVehicle(): ?Reservation
+       {
+          return $this->createQueryBuilder('v')
+              ->andWhere('v.pret = :pret')
+              ->setParameter('pret', true)
+              ->orderBy('v.id', 'ASC')
+              ->getQuery()
+              ->getResult()
+           ;
+       }*/
 }

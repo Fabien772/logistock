@@ -1,0 +1,66 @@
+{# templates/reservation/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('assets/css/calendar/main.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+	<script src="{{ asset('assets/js/calendar/main.min.js')}}"></script>
+	<script src="{{ asset('assets/js/calendar/fr.min.js') }}"></script>
+	
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+var calendarEl = document.getElementById('calendar');
+var calendar = new FullCalendar.Calendar(calendarEl, {
+initialView: 'dayGridMonth',
+locale: 'fr',
+events: [{% for reservation in reservations %}{
+title: '{{ reservation.vehicle.immat }}-     {{ reservation.customerName }}',
+start: '{{ reservation.startDate|date('Y-m-d\\TH:i:s') }}',
+end: '{{ reservation.endDate|date('Y-m-d\\TH:i:s') }}',
+color: '#    {{ random(['3a86ff', '8338ec', 'ff006e', 'fb5607', 'ffbe0b']) }}'
+},{% endfor %}]
+});
+calendar.render();
+});
+	</script>
+
+{% endblock %}
+
+{% block body %}
+	<div  class="container main-content-accueil">
+
+		<div class="row">
+			<div class="col ">
+				
+			</div>
+		</div>
+		
+
+
+		<div class="row">
+
+			
+
+			<div class="col-6">
+
+				<button type="button" class="col btn-pulse-modify  col  alert alert-info">
+					<a href="{{ path('reservation_new') }}">Nouvelle réservation</a>
+				</button>
+				<button type="button" class="col btn-pulse-delete  col  alert alert-danger">
+					<a href="{{ path('reservation_edit') }}">Modifier une réservation</a>
+				</button>
+			</div>
+			<div class="col-6">
+			{% for message in app.flashes('message') %}
+					<div class="alert alert-success" role="alert">
+						{{ message }}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div id="calendar"></div>
+	</div>
+{% endblock %}

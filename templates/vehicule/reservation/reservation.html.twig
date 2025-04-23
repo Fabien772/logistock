@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+	<script src='../dist/index.global.js'></script>
+	<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function () {
+var calendarEl = document.getElementById('calendar');
+
+var calendar = new FullCalendar.Calendar(calendarEl, {
+headerToolbar: {
+left: 'prev,next today',
+center: 'title',
+right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+},
+// initialDate: '2023-01-12',
+navLinks: true, // can click day/week names to navigate views
+businessHours: true, // display business hours
+editable: true,
+selectable: true,
+events: [{% for reservation in reservations %}{
+title: '{{ reservation.vehicle.immat }}-       {{ reservation.customerName }}',
+start: '{{ reservation.startDate|date('Y-m-d\\TH:i:s') }}',
+end: '{{ reservation.endDate|date('Y-m-d\\TH:i:s') }}',
+color: '      {{ random(['3a86ff', '8338ec', 'ff006e', 'fb5607', 'ffbe0b']) }}'
+},{% endfor %}]
+});
+
+calendar.render();
+});
+	</script>
+{% endblock %}
+{% block stylesheets %}
+	<style>
+
+		body {
+			margin: 40px 10px;
+			padding: 0;
+			font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+			font-size: 14px;
+		}
+
+		#calendar {
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+	</style>
+{% endblock %}
+{% block body %}
+	<div class="main-content-agenda">
+		<div class="row">
+			<div class="col "></div>
+		</div>
+
+
+		<div class="row">
+
+
+			<div class="col-6 ">
+
+				<button onclick="window.location.href='{{ path('reservation_new') }}'" type="button" class="col btn-pulse-modify  col  alert alert-info">
+					Ajouter une réservation
+				</button>
+				<button onclick="window.location.href='{{ path('reservation_edit') }}'" type="button" class="col btn-pulse-delete  col  alert alert-danger">
+					Modifier une réservation
+				</button>
+			</div>
+			<div class="col-6">
+				
+			</div>
+		</div>
+		<div id="calendar"></div>
+	</div>
+{% endblock %}

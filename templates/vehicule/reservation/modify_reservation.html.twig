@@ -2,7 +2,7 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}Nouvelle réservation
+{% block title %}Modification réservation
 {% endblock %}
 
 {% block stylesheets %}
@@ -53,6 +53,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () { // Configuration du datetime picker
+
+ // Activer tous les champs désactivés
+    document.querySelectorAll('input, select, textarea').forEach(element => {
+        element.disabled = false;
+        element.readOnly = false;
+    });
+
+
 flatpickr('.datetimepicker', {
 enableTime: true,
 dateFormat: "Y-m-d H:i",
@@ -72,12 +80,13 @@ endDatePicker.set('minDate', dateStr);
 
 {% block body %}
 	<div class="container main-content-formulaire">
-		<div class="form-container">
-			
+		<div
+			class="form-container">
+
 
 			{# Affichage des messages flash #}
 			{% for message in app.flashes('error') %}
-				<div class="alert alert-danger role="alert">
+				<div class="alert alert-danger role=" alert">
 					{{ message }}
 				</div>
 			{% endfor %}
@@ -103,20 +112,23 @@ endDatePicker.set('minDate', dateStr);
 
 			<div class="form-group">
 				{{ form_label(form.customerName) }}
-				{{ form_widget(form.customerName, {'attr': {'class': 'form-control', 'required': true}}) }}
+				{{ form_widget(form.customerName, {'attr': {'class': 'form-control'}}) }}
 				{{ form_errors(form.customerName) }}
 			</div>
 
 			<div class="form-group text-right">
-				
-				<button onclick="window.location.href='{{ path('reservation_new') }}'" type="submit" class="col btn-pulse-modify  col  alert alert-info w-100">
-					Ajouter
+
+				<button type="submit" class="col btn-pulse-modify  col  alert alert-info w-100">
+					Valider les modifications
 				</button>
-				<button onclick="window.location.href='{{ path('reservation_index') }}'" type="button" class="col btn-pulse-delete  col  alert alert-info w-100">
+				<button onclick="window.location.href='{{ path('reservation_index') }}'" type="button" class="col btn-pulse-delete  col  alert alert-danger w-100">
 					Annuler
 				</button>
+				
 			</div>
 			{{ form_end(form) }}
+
+			
 		</div>
 	</div>
 {% endblock %}

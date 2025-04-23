@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Vehicle;
 use App\Entity\Reservation;
+use Dom\Attr;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -21,7 +22,10 @@ class ReservationType extends AbstractType
             ->add('vehicle', EntityType::class, [
                 'label' => 'Véhicule',
                 'class' => Vehicle::class,
+                // 'choices' => $options['disabled'] ? null : $options['vehiclesAvailable'],
+                'choices' => $options['vehiclesAvailable'],
                 'choice_label' => 'immat',
+                
             ])
             ->add('startDate', DateTimeType::class, [
                 'label' => 'Date de début',
@@ -35,8 +39,8 @@ class ReservationType extends AbstractType
                 'html5' => false,
                 'attr' => ['class' => 'datetimepicker'],
             ])
-            ->add('customerName', TextType::class, ['label' => 'Service'])
-            ->add('submit', SubmitType::class, ['label' => 'Réserver']);
+            ->add('customerName', TextType::class, ['label' => 'Service','required' => true]);
+            // ->add('submit', SubmitType::class, ['label' => 'Réserver']);
     }
 
 
@@ -44,6 +48,9 @@ class ReservationType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Reservation::class,
+            'vehiclesAvailable' => [], 
+            'disabled' => false,
         ]);
     }
+   
 }

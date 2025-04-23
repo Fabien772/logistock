@@ -65,6 +65,9 @@ class Vehicle
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateAcquisition = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $kilometrage = null;
+
     public function __construct()
     {
         $this->reservations = new ArrayCollection();
@@ -243,6 +246,18 @@ class Vehicle
     public function setDateAcquisition(?\DateTimeInterface $dateAcquisition): static
     {
         $this->dateAcquisition = $dateAcquisition;
+
+        return $this;
+    }
+
+    public function getKilometrage(): ?int
+    {
+        return $this->kilometrage;
+    }
+
+    public function setKilometrage(?int $kilometrage): static
+    {
+        $this->kilometrage = $kilometrage;
 
         return $this;
     }

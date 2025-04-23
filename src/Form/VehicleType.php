@@ -4,14 +4,15 @@ namespace App\Form;
 
 use App\Entity\Vehicle;
 use Doctrine\DBAL\Types\BooleanType;
-use Symfony\Bridge\PhpUnit\ClassExistsMock;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Bridge\PhpUnit\ClassExistsMock;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class VehicleType extends AbstractType
 {
@@ -28,6 +29,7 @@ class VehicleType extends AbstractType
             ->add('pret', CheckboxType::class, ['label' => 'Disponible pour prêt', 'required' => false,])
             ->add('situation', TextType::class, ['label' => 'Situation', 'required' => false, 'attr' => ['placeholder' => 'Situation']])
             ->add('dateCT', DateType::class, ['label' => 'Date de CT', 'widget' => 'single_text','required' => false])
+            ->add('kilometrage', IntegerType::class, ['label' => 'Kilométrage', 'attr' => ['placeholder' => 'Kilométrage'], 'required' => false])
             ->add('comment', TextType::class, ['label' => 'Commentaire', 'required' => false, 'attr' => ['placeholder' => 'Commentaire']])
             
         ;

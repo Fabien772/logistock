@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 final class VehiculeController extends AbstractController
 {
-    #[Route('/vehicule', name: 'app_vehicule')]
+    #[Route('/vehicule', name: 'app_vehicle')]
     public function index(EntityManagerInterface $em): Response
     {
         $vehicles = new Vehicle();
@@ -21,10 +21,12 @@ final class VehiculeController extends AbstractController
 
         return $this->render('vehicule/vehicles.html.twig', [
             'vehicles' => $vehicles,
+            'titre' => "Parc automobile",
+            'create_vehicle' => "Créer un véhicule",
         ]);
     }
 
-    #[Route('/vehicule/create', name: 'app_create_vehicle')]
+    #[Route('/vehicule/create', name: 'app_create_vehicle', methods: ['POST', 'GET'])]
     public function create(Request $request, EntityManagerInterface $entityManager): Response
     {
         $vehicle = new Vehicle();
@@ -40,11 +42,12 @@ final class VehiculeController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('message', 'Véhicule créé avec succès.');
-            return $this->redirectToRoute('app_vehicule');
+            return $this->redirectToRoute('app_vehicle',['titre'=> "Parc automobile"]);
         }
 
         return $this->render('vehicule/create_vehicle.html.twig', [
             'form' => $form->createView(),
+            'titre' => "Création d'un véhicule"
         ]);
     }
 
@@ -68,12 +71,13 @@ final class VehiculeController extends AbstractController
             $em->flush();
 
             $this->addFlash('message', 'Véhicule modifié avec succès.');
-            return $this->redirectToRoute('app_vehicule');
+            return $this->redirectToRoute('app_vehicle');
         }
 
         return $this->render('vehicule/edit_vehicle.html.twig', [
             'form' => $form->createView(),
-            'vehicle' => $vehicle
+            'vehicle' => $vehicle,
+            'titre' => "Modification d'un véhicule"
         ]);
     }
 
@@ -94,7 +98,7 @@ final class VehiculeController extends AbstractController
 
             $this->addFlash('message', 'Impossible de supprimer ce véhicule car il a des réservations associées.');
 
-            return $this->redirectToRoute('app_vehicule');
+            return $this->redirectToRoute('app_vehicle', ['titre' => "Parc automobile"]);
         }
 
         $em->remove($vehicle);
@@ -103,16 +107,16 @@ final class VehiculeController extends AbstractController
 
 
 
-        return $this->redirectToRoute('app_vehicule');
+        return $this->redirectToRoute('app_vehicle',['titre'=> "Parc automobile"]);
     }
 
     // Confirmation de suppression du véhicule
 
-    #[Route('/vehicule/delete/confirm-delete/{id}', name: 'vehicle_confirm_delete', methods: ['POST', 'GET'])]
-    public function confirmDelete(Vehicle $vehicle): Response
-    {
-        return $this->render('vehicule/confirm_delete_vehicle.html.twig', [
-            'vehicle' => $vehicle,
-        ]);
-    }
+    // #[Route('/vehicule/delete/confirm-delete/{id}', name: 'vehicle_confirm_delete', methods: ['POST', 'GET'])]
+    // public function confirmDelete(Vehicle $vehicle): Response
+    // {
+    //     return $this->render('vehicule/confirm_delete_vehicle.html.twig', [
+    //         'vehicle' => $vehicle,
+    //     ]);
+    // }
 }

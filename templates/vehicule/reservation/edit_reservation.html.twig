@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Réservation
+{% endblock %}
+
+
+{% block body %}
+	<div class="container main-content">
+		<div class="row justify-content-start">
+			<div class="col">
+				
+			</div>
+			<div class="col text-end">
+				{% for message in app.flashes('message') %}
+					<div class="alert alert-success" role="alert">
+						{{ message }}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="container mt-4 ">
+		{% for reservation in reservations %}
+
+			<div class="row  text-center justify-content-start ">
+				<div class=" col-8 alert alert-secondary" role="alert">
+					{{ reservation.vehicle.marque }}
+					{{ reservation.vehicle.modele }}
+					<b>{{ reservation.vehicle.immat }}
+					</b>
+					du
+					{{ reservation.startDate|date('d/m/Y') }}
+					au
+					{{ reservation.endDate|date('d/m/Y') }}</div>
+				{# <button onclick="window.location.href='{{path('reservation_modify',{'id':reservation.id})}}'" class="col btn-pulse-modify  col  alert alert-info" role="button">Modifier</button> #}
+
+				<!-- Button trigger modal avec confirmation de suppression -->
+
+				<button type="button" class="col btn-pulse-delete alert alert-danger " data-bs-toggle="modal" data-bs-target="#exampleModal">
+					Supprimer
+				</button>
+				<div class="col"></div>
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5" id="exampleModalLabel">Voulez-vous vraiment supprimer la réservation
+								</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">{{reservation.vehicle.marque}} {{reservation.vehicle.modele}}
+								
+								{{reservation.vehicle.immat}}
+								du
+								{{reservation.startDate|date('d/m/Y')}}
+								au
+								{{reservation.endDate|date('d/m/Y')}}
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+								<a class="btn btn-outline-danger" type="link" href="{{path('reservation_delete',{'id':reservation.id})}}">Confirmer</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- fin Modal -->
+
+			</div>
+		{% endfor %}
+
+	</div>
+
+
+{% endblock %}

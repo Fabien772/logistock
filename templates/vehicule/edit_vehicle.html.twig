@@ -1,34 +1,35 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}modif vehicle
+{% block title %}
+	Modification d'un véhicule
 {% endblock %}
 
 
 {% block body %}
+<div class="main-content-accueil">
 	<div class="container">
 		<div class="row">
-			<div class="col">
-				<h2>Modifier le véhicule</h2>
-			</div>
+			<div class="col"></div>
 			<div class="col"></div>
 			<div class="col"></div>
 		</div>
 
 		{{ form_start(form) }}
-		<div class="row p-3 mb-2 bg-secondary bg-gradient text-white rounded-3">
+		<div class="row row-custom-bg p-3 mb-2  bg-gradient text-white rounded-3">
 
 
 			<div class="col-md-6">{{form_row(form.marque)}}</div>
 			<div class="col-md-6">{{form_row(form.immat)}}</div>
 			<div class="col-md-6">{{form_row(form.modele)}}</div>
+			<div class="col-md-6">{{form_row(form.kilometrage)}}</div>
 
 			<div class="col-md-6">{{form_row(form.dateAcquisition)}}</div>
+			<div class="col-md-6">{{form_row(form.attribution)}}</div>
 			<div class="col-md-6">{{form_row(form.equipementPolice)}}</div>
 			<div class="col-md-6">{{form_row(form.pret)}}</div>
 
 
-			<div class="col-md-6">{{form_row(form.attribution)}}</div>
 			<div class="col-md-6">{{form_row(form.situation)}}</div>
 			<div class="col-md-6">{{form_row(form.numeroPlace)}}</div>
 			<div class="col-md-6">{{form_row(form.comment)}}</div>
@@ -37,19 +38,50 @@
 
 		</div>
 
-		<div class="row mb-2">
-			<button type="submit" class="btn btn-outline-success">Enregistrer les modifications</button>
-		</div>
-		<div class="row">
-			<a class="btn btn-outline-danger" type="link" href="{{path('vehicle_confirm_delete',{'id':vehicle.id})}}">Supprimer le véhicule</a>
+		<div class="row ">
+			<div class="col-6 ">
+				<button type="submit" class="btn-pulse-modify w-100 alert alert-info">Enregistrer les modifications</button>
+			</div>
 
-		
+
+			<!-- Button trigger modal avec confirmation de suppression -->
+
+			<div class="col-6">
+				<button type="button" class="col btn-pulse-delete w-100 col  alert alert-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					Supprimer le véhicule
+				</button>
+			</div>
 		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel">Voulez-vous vraiment supprimer le véhicule
+						</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						{{vehicle.marque}}
+						{{vehicle.modele}}
+						{{vehicle.immat}}
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+						<a class="btn btn-outline-danger" type="link" href="{{path('vehicle_delete',{'id':vehicle.id})}}">Confirmer</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Fin du modal -->
+
+
 		{{ form_end(form) }}
 
 	</div>
-
+</div>
 
 {% endblock %}
-
-
