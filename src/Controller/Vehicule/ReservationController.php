@@ -43,6 +43,9 @@ final class ReservationController extends AbstractController
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) {
+
+
+            
             // Vérifier que la date de fin est après la date de début
             if ($reservation->getEndDate() <= $reservation->getStartDate()) {
                 $this->addFlash('error', 'La date de fin doit être après la date de début.');

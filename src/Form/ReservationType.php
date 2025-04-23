@@ -31,15 +31,15 @@ class ReservationType extends AbstractType
                 'label' => 'Date de début',
                 'widget' => 'single_text',
                 'html5' => false,
-                'attr' => ['class' => 'datetimepicker'],
+                'attr' => ['class' => 'datetimepicker', 'placeholder' => 'Champ obligatoire'],
             ])
             ->add('endDate', DateTimeType::class, [
                 'label' => 'Date de fin',
                 'widget' => 'single_text',
                 'html5' => false,
-                'attr' => ['class' => 'datetimepicker'],
+                'attr' => ['class' => 'datetimepicker', 'placeholder' => 'Champ obligatoire'],
             ])
-            ->add('customerName', TextType::class, ['label' => 'Service','required' => true]);
+            ->add('customerName', TextType::class, ['label' => 'Service','required' => true,'attr' => ['placeholder' => 'Champ obligatoire']]);
             // ->add('submit', SubmitType::class, ['label' => 'Réserver']);
     }
 

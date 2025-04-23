@@ -72,21 +72,15 @@ endDatePicker.set('minDate', dateStr);
 
 {% block body %}
 	<div class="container main-content-formulaire">
-
-
-		<div class="row text-center">
-			<div
-				class="col">
-				{# Affichage des messages flash #}
-				{% for message in app.flashes('error') %}
-					<div class="alert alert-danger" role="alert">
-						{{ message }}
-					</div>
-				{% endfor %}
-			</div>
-		</div>
 		<div class="form-container">
+			
 
+			{# Affichage des messages flash #}
+			{% for message in app.flashes('error') %}
+				<div class="alert alert-danger role="alert">
+					{{ message }}
+				</div>
+			{% endfor %}
 
 			{{ form_start(form) }}
 			<div class="form-group">
@@ -114,7 +108,7 @@ endDatePicker.set('minDate', dateStr);
 			</div>
 
 			<div class="form-group text-right">
-
+				
 				<button onclick="window.location.href='{{ path('reservation_new') }}'" type="submit" class="col btn-pulse-modify  col  alert alert-info w-100">
 					Ajouter
 				</button>
@@ -124,6 +118,5 @@ endDatePicker.set('minDate', dateStr);
 			</div>
 			{{ form_end(form) }}
 		</div>
-		
 	</div>
 {% endblock %}

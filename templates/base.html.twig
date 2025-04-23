@@ -23,6 +23,14 @@
 
 					<div onclick="window.location.href='{{path('app_index')}}'" class="logo">LOGISTOCK</div>
 
+							{% for message in app.flashes('message') %}
+
+								<div class=" alert-success font-custom-alert " role="alert">
+									{{ message }}
+								</div>
+
+							{% endfor %}
+
 
 					<div class="row">
 						<div class="col ">
@@ -30,6 +38,7 @@
 								<h7 class="border border-light pt-2 pb-2 ps-3 pe-3 ">{{titre}}</h7>
 							{% endif %}
 						</div>
+						
 						<div class="col text-center tagline">Gestion intégrée de matériel</div>
 
 
@@ -39,14 +48,6 @@
 									<a href="{{path('app_create_vehicle')}}">{{create_vehicle}}<img src="{{ asset('icons/plus.svg') }}" alt="Icône + " width="40" height="20"></a>
 								</h7>
 							{% endif %}
-
-							{% for message in app.flashes('message') %}
-
-								<div class=" alert-success font-custom-alert " role="alert">
-									{{ message }}
-								</div>
-
-							{% endfor %}
 
 						</div>
 

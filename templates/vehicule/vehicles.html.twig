@@ -4,24 +4,13 @@
 {% block body %}
 
 
-	{# <div class="row ">
-							<div class="col sticky-row-tableau-vehicule">
-								<h4>Parc automobile cabinet</h4>
-							</div>
-							<div class="col sticky-row-tableau-vehicule">
-								{% for message in app.flashes('message') %}
-									<div class="alert alert-success" role="alert">
-										{{ message }}
-									</div>
-								{% endfor %}
-							</div>
-						</div> #}
-	<div class="container-fluid text-center">
+	
+	<div class="container-fluid text-center main-content">
 		<div class="row ">
 			<div class="col ">
 				<table class="table table-secondary table-hover ">
-					<thead>
-						<tr class="sticky-tr-tableau-vehicule">
+					<thead class="sticky-tableau-vehicule">
+						<tr>
 							<th scope="col"></th>
 							<th scope="col">Marque</th>
 							<th scope="col">Modèle</th>
