@@ -45,12 +45,63 @@ calendar.render();
 			font-size: 14px;
 		}
 
+		.fc-button-primary {
+			background-color: #2c3e50 !important;
+			border-color: #2c3e50 !important;
+		}
+
+		.fc-button-primary:hover {
+			background-color: #1a252f !important;
+			border-color: #1a252f !important;
+		}
+
+		.fc-button-primary:not(:disabled):active,
+		.fc-button-primary:not(:disabled).fc-button-active {
+			background-color: #1a252f !important;
+			border-color: #1a252f !important;
+		}
+
+		.fc-toolbar-title {
+			font-size: 1.5em !important;
+			font-weight: bold !important;
+		}
+
+		.fc-daygrid-day-number,
+		.fc-col-header-cell-cushion {
+			color: inherit !important;
+			text-decoration: none !important;
+		}
+
+		.fc-theme-standard td,
+		.fc-theme-standard th,
+		.fc-theme-standard .fc-scrollgrid {
+			border-color: #ddd !important;
+		}
+
+		.fc .fc-view-harness {
+			background: white !important;
+		}
+
+		.fc-event {
+			border: none !important;
+			padding: 2px 5px !important;
+			font-size: 0.85em !important;
+		}
+
+		.fc-header-toolbar {
+			margin-bottom: 1.5em !important;
+		}
+		.fc-view-harness {
+			height: 450px !important; /* Ajuste la hauteur du calendrier */
+		}
 
 
 		#calendar {
-			max-width: 1100px;
+			max-width: 1000px;
 			margin: 0 auto;
 		}
+
+		
 	</style>
 {% endblock %}
 {% block body %}
@@ -63,12 +114,11 @@ calendar.render();
 		<div class="row">
 
 
-			<div class="col-12">
-
-				<button onclick="window.location.href='{{ path('reservation_new') }}'" type="button" class="btn-pulse-modify alert alert-info ">
+			<div class="col-12 text-center">
+				<button onclick="window.location.href='{{ path('reservation_new') }}'" type="button" class="btn-pulse-modify alert alert-info mx-2">
 					Ajouter une réservation
 				</button>
-				<button onclick="window.location.href='{{ path('reservation_edit') }}'" type="button" class="col btn-pulse-delete  col  alert alert-danger ">
+				<button onclick="window.location.href='{{ path('reservation_edit') }}'" type="button" class="btn-pulse-delete alert alert-danger mx-2">
 					Modifier une réservation
 				</button>
 			</div>

@@ -22,7 +22,7 @@ final class VehiculeController extends AbstractController
         return $this->render('vehicule/vehicles.html.twig', [
             'vehicles' => $vehicles,
             'titre' => "Parc automobile",
-            'create_vehicle' => "Créer un véhicule",
+            
         ]);
     }
 

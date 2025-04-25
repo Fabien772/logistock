@@ -20,9 +20,8 @@
 			<div class="row fixed-top">
 
 				<header>
-
-					<div onclick="window.location.href='{{path('app_index')}}'" class="logo">LOGISTOCK</div>
-
+					<div class="row">
+						<div class="col-4">
 							{% for message in app.flashes('message') %}
 
 								<div class=" alert-success font-custom-alert " role="alert">
@@ -30,6 +29,17 @@
 								</div>
 
 							{% endfor %}
+						</div>
+						<div class="col-4 logo" onclick="window.location.href='{{path('app_index')}}'">LOGISTOCK</div>
+						<div class="col-4">
+
+							{% for message in app.flashes('message') %}
+								<div class="alert-success font-custom-alert blink" role="alert">
+									{{ message }}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
 
 
 					<div class="row">
@@ -38,16 +48,16 @@
 								<h7 class="border border-light pt-2 pb-2 ps-3 pe-3 ">{{titre}}</h7>
 							{% endif %}
 						</div>
-						
+
 						<div class="col text-center tagline">Gestion intégrée de matériel</div>
 
 
 						<div class="col ">
-							{% if create_vehicle is defined %}
-								<h7 class="btn-pulse-create border border-light rounded-pill p-2 ">
-									<a href="{{path('app_create_vehicle')}}">{{create_vehicle}}<img src="{{ asset('icons/plus.svg') }}" alt="Icône + " width="40" height="20"></a>
-								</h7>
-							{% endif %}
+
+							<h7 class="btn-pulse-create border border-light rounded-pill p-2 ">
+								<a class="text-decoration-none text-white" href="{{path('app_create_vehicle')}}">Ajouter un véhicule<img src="{{ asset('icons/plus.svg') }}" alt="Icône + " width="40" height="20"></a>
+							</h7>
+
 
 						</div>
 

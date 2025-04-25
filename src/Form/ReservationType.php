@@ -24,7 +24,9 @@ class ReservationType extends AbstractType
                 'class' => Vehicle::class,
                 // 'choices' => $options['disabled'] ? null : $options['vehiclesAvailable'],
                 'choices' => $options['vehiclesAvailable'],
-                'choice_label' => 'immat',
+                'choice_label' => function(Vehicle $vehicle) {
+                    return $vehicle->getMarque() . ' ' . $vehicle->getModele() . ' - ' . $vehicle->getImmat();
+                }
                 
             ])
             ->add('startDate', DateTimeType::class, [
