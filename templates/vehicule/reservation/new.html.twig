@@ -68,6 +68,7 @@ endDatePicker.set('minDate', dateStr);
 });
 });
 	</script>
+
 {% endblock %}
 
 {% block body %}
@@ -91,31 +92,31 @@ endDatePicker.set('minDate', dateStr);
 			{{ form_start(form) }}
 			<div class="form-group">
 				{{ form_label(form.vehicle) }}
-				{{ form_widget(form.vehicle, {'attr': {'class': 'form-control'}}) }}
+				{{ form_widget(form.vehicle, {'attr': {'class': 'form-control',}}) }}
 				{{ form_errors(form.vehicle) }}
 			</div>
 
 			<div class="form-group">
 				{{ form_label(form.startDate) }}
-				{{ form_widget(form.startDate, {'attr': {'class': 'datetimepicker form-control'}}) }}
+				{{ form_widget(form.startDate, {'attr': {'class': 'datetimepicker form-control',}}) }}
 				{{ form_errors(form.startDate) }}
 			</div>
 
 			<div class="form-group">
 				{{ form_label(form.endDate) }}
-				{{ form_widget(form.endDate, {'attr': {'class': 'datetimepicker form-control'}}) }}
+				{{ form_widget(form.endDate, {'attr': {'class': 'datetimepicker form-control',}}) }}
 				{{ form_errors(form.endDate) }}
 			</div>
 
 			<div class="form-group">
 				{{ form_label(form.customerName) }}
-				{{ form_widget(form.customerName, {'attr': {'class': 'form-control', 'required': true}}) }}
+				{{ form_widget(form.customerName, {'attr': {'class': 'form-control', }}) }}
 				{{ form_errors(form.customerName) }}
 			</div>
 
 			<div class="form-group text-right">
 
-				<button onclick="window.location.href='{{ path('reservation_new') }}'" type="submit" class="col btn-pulse-modify  col  alert alert-info w-100">
+				<button type="submit" class="col btn-pulse-modify  col  alert alert-info w-100">
 					Ajouter
 				</button>
 				<button onclick="window.location.href='{{ path('reservation_index') }}'" type="button" class="col btn-pulse-delete  col  alert alert-info w-100">
@@ -124,6 +125,6 @@ endDatePicker.set('minDate', dateStr);
 			</div>
 			{{ form_end(form) }}
 		</div>
-		
+
 	</div>
 {% endblock %}

@@ -44,7 +44,7 @@ final class ReservationController extends AbstractController
         
         if ($form->isSubmitted() && $form->isValid()) {
 
-
+           
             
             // Vérifier que la date de fin est après la date de début
             if ($reservation->getEndDate() <= $reservation->getStartDate()) {
@@ -62,6 +62,10 @@ final class ReservationController extends AbstractController
                 $this->addFlash('error', 'Le véhicule n\'est pas disponible pour cette période.');
             }
         }
+       
+            
+        
+           
         
         return $this->render('vehicule/reservation/new.html.twig', [
             'form' => $form->createView(),
@@ -70,7 +74,7 @@ final class ReservationController extends AbstractController
     }
     
     #[Route('vehicule/reservation/edit', name: 'reservation_edit', methods: ['GET', 'POST'])]
-    public function edit( EntityManagerInterface $em, ): Response
+    public function edit( EntityManagerInterface $em, Request $request): Response
     {
        
         $reservations = $em->getRepository(Reservation::class)->findAll();
@@ -112,7 +116,7 @@ final class ReservationController extends AbstractController
         $em->flush();
         $this->addFlash('message', 'Réservation supprimée avec succès.');
         
-        return $this->redirectToRoute('reservation_edit',[ 'titre' => 'Modification de la réservation',]);
+        return $this->redirectToRoute('reservation_index');
 
 
         

@@ -2,9 +2,10 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 final class IndexController extends AbstractController
 {
@@ -12,7 +13,16 @@ final class IndexController extends AbstractController
     public function index(): Response
     {
         return $this->render('index/index.html.twig', [
-            'controller_name' => 'IndexController',
+            'page_name' => 'app_index',
         ]);
+    }
+
+    #[Route('/undo', name: 'app_undo')]
+    public function page_undo(Request $request): Response
+    {
+        return $this->redirect($request->headers->get('referer'));
+    
+       
+        
     }
 }

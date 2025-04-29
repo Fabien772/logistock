@@ -24,7 +24,7 @@ class VehicleType extends AbstractType
             ->add('modele', TextType::class, ['label' => 'Modèle', 'attr' => ['placeholder' => 'Modèle'], 'required' => true])
             ->add('dateAcquisition', DateType::class, ['label' => 'Date d\'acquisition', 'widget' => 'single_text','required' => false])
             ->add('attribution', TextType::class, ['label' => 'Attribution', 'attr' => ['placeholder' => 'Attribution'], 'required' => false])
-            ->add('numeroPlace', TextType::class, ['label' => 'Numero de place', 'attr' => ['placeholder' => 'Numero de place']])
+            ->add('numeroPlace', TextType::class, ['label' => 'Numero de place', 'attr' => ['placeholder' => 'Numero de place'], 'required' => false])
             ->add('equipementPolice', CheckboxType::class, ['label' => 'Equipement de police', 'required' => false,])
             ->add('pret', CheckboxType::class, ['label' => 'Disponible pour prêt', 'required' => false,])
             ->add('situation', TextType::class, ['label' => 'Situation', 'required' => false, 'attr' => ['placeholder' => 'Situation']])

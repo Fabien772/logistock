@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block javascripts %}
-	
+
 	<script src="{{ asset('assets/js/calendar/index.global.js') }}"></script>
 	{# <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script> #}
 	<script>
@@ -10,7 +10,7 @@
 var calendarEl = document.getElementById('calendar');
 
 var calendar = new FullCalendar.Calendar(calendarEl, {
-	
+
 headerToolbar: {
 locale: 'fr',
 left: 'prev,next today',
@@ -22,11 +22,27 @@ navLinks: true, // can click day/week names to navigate views
 businessHours: true, // display business hours
 editable: true,
 selectable: true,
+selectMirror: true,
+select: function (arg) {
+var title = prompt('Event Title:');
+if (title) {
+calendar.addEvent({title: title, start: arg.start, end: arg.end, allDay: arg.allDay})
+}
+calendar.unselect()
+},
+eventClick: function (arg) {
+if (confirm('Voulez-vous modifier cette réservation?')) {
+	
+window.location.href="{{path('reservation_edit')}}"
+}
+},
+editable: true,
+dayMaxEvents: true, // allow "more" link when too many events
 events: [{% for reservation in reservations %}{
-title: '{{ reservation.vehicle.immat }}-       {{ reservation.customerName }}',
+title: '{{ reservation.vehicle.immat }}-        {{ reservation.customerName }}',
 start: '{{ reservation.startDate|date('Y-m-d\\TH:i:s') }}',
 end: '{{ reservation.endDate|date('Y-m-d\\TH:i:s') }}',
-color: '      {{ random(['3a86ff', '8338ec', 'ff006e', 'fb5607', 'ffbe0b']) }}'
+color: '       {{ random(['3a86ff', '8338ec', 'ff006e', 'fb5607', 'ffbe0b']) }}'
 },{% endfor %}]
 });
 calendar.setOption('locale', 'fr');
@@ -100,8 +116,6 @@ calendar.render();
 			max-width: 1000px;
 			margin: 0 auto;
 		}
-
-		
 	</style>
 {% endblock %}
 {% block body %}
@@ -115,14 +129,14 @@ calendar.render();
 
 
 			<div class="col-12 text-center">
-				<button onclick="window.location.href='{{ path('reservation_new') }}'" type="button" class="btn-pulse-modify alert alert-info mx-2">
+				<button onclick="window.location.href='{{ path('reservation_new') }}'" type="button" class="btn-pulse-modify alert alert-info mx-auto">
 					Ajouter une réservation
 				</button>
-				<button onclick="window.location.href='{{ path('reservation_edit') }}'" type="button" class="btn-pulse-delete alert alert-danger mx-2">
+				<button onclick="window.location.href='{{ path('reservation_edit') }}'" type="button" class="btn-pulse-delete alert alert-danger mx-auto">
 					Modifier une réservation
 				</button>
 			</div>
-			
+
 		</div>
 		<div class="row">
 			<div classe"col" id="calendar"></div>
