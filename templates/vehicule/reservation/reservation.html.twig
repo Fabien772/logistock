@@ -113,8 +113,9 @@ calendar.render();
 
 
 		#calendar {
-			max-width: 1000px;
+			max-width: 850px;
 			margin: 0 auto;
+			margin-bottom: 75px;
 		}
 	</style>
 {% endblock %}
@@ -128,7 +129,7 @@ calendar.render();
 		<div class="row">
 
 
-			<div class="col-12 text-center">
+			<div class="col-12 text-center ">
 				<button onclick="window.location.href='{{ path('reservation_new') }}'" type="button" class="btn-pulse-modify alert alert-info mx-auto">
 					Ajouter une réservation
 				</button>

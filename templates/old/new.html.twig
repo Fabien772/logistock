@@ -48,7 +48,26 @@
 {% endblock %}
 
 {% block javascripts %}
-	
+	{{ parent() }}
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () { // Configuration du datetime picker
+flatpickr('.datetimepicker', {
+enableTime: false,
+dateFormat: "Y-m-d H:i",
+time_24hr: true,
+locale: "fr",
+minDate: "today",
+onChange: function (selectedDates, dateStr, instance) { // Synchronisation des dates min/max entre start et end
+if (instance.input.id === 'reservation_startDate') {
+const endDatePicker = document.getElementById('reservation_endDate')._flatpickr;
+endDatePicker.set('minDate', dateStr);
+}
+}
+});
+});
+
 
 
 	</script>
@@ -82,13 +101,13 @@
 
 			<div class="form-group">
 				{{ form_label(form.startDate) }}
-				{{ form_widget(form.startDate, {'attr': {'class': 'form-control',}}) }}
+				{{ form_widget(form.startDate, {'attr': {'class': 'datetimepicker form-control',}}) }}
 				{{ form_errors(form.startDate) }}
 			</div>
 
 			<div class="form-group">
 				{{ form_label(form.endDate) }}
-				{{ form_widget(form.endDate, {'attr': {'class': 'form-control',}}) }}
+				{{ form_widget(form.endDate, {'attr': {'class': 'datetimepicker form-control',}}) }}
 				{{ form_errors(form.endDate) }}
 			</div>
 

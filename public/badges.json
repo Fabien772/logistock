@@ -1,0 +1,602 @@
+[
+  {
+    "badgeNumber": "0250093599262000011",
+    "serialNumber": "0325040396682504",
+    "Identifiant 1": "GB-483-GL",
+    "Identifiant 2": "DGPN",
+    "Identifiant 3": "GB-483-GL",
+    "Immatriculation": "GB-493-GL",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000029",
+    "serialNumber": "0325040396612504",
+    "Identifiant 1": "GE-750-LW",
+    "Identifiant 2": "DGA",
+    "Identifiant 3": "GE-750-LW",
+    "Immatriculation": "GE-750-LW",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000037",
+    "serialNumber": "0325040396622504",
+    "Identifiant 1": "FV-201-HN",
+    "Identifiant 2": "DIRCAB",
+    "Identifiant 3": "FV-201-HN",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000045",
+    "serialNumber": "0325040396632504",
+    "Identifiant 1": "FV-939-JE",
+    "Identifiant 2": "CHAUFFEURS",
+    "Identifiant 3": "FV-939-JE",
+    "Immatriculation": "FV-939-JE",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000052",
+    "serialNumber": "0325040396572504",
+    "Identifiant 1": "GB-551-TM",
+    "Identifiant 2": "CHAMPAGNAT",
+    "Identifiant 3": "GB-551-TM",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000060",
+    "serialNumber": "0325040396582504",
+    "Identifiant 1": "GF-263-WJ",
+    "Identifiant 2": "DULION",
+    "Identifiant 3": "GF-263-WJ",
+    "Immatriculation": "GF-263-WJ",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000078",
+    "serialNumber": "0325040396592504",
+    "Identifiant 1": "GF-864-WJ",
+    "Identifiant 2": "LIEUTAUD",
+    "Identifiant 3": "GF-864-WJ",
+    "Immatriculation": "GF-864-WJ",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000086",
+    "serialNumber": "0325040396642504",
+    "Identifiant 1": "EH-591-DH",
+    "Identifiant 2": "LLEDO",
+    "Identifiant 3": "EH-591-DH",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000094",
+    "serialNumber": "0325040396602504",
+    "Identifiant 1": "EY-502-HX",
+    "Identifiant 2": "BRUN",
+    "Identifiant 3": "EY-502-HX",
+    "Immatriculation": "EY-502-HX",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000102",
+    "serialNumber": "0325040396562504",
+    "Identifiant 1": "EZ-604-CB",
+    "Identifiant 2": "JUMEL",
+    "Identifiant 3": "EZ-604-CB",
+    "Immatriculation": "EZ-604-CB",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000110",
+    "serialNumber": "0325040396552504",
+    "Identifiant 1": "FP-258-LK",
+    "Identifiant 2": "JULLIEN",
+    "Identifiant 3": "FP-258-LK",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000128",
+    "serialNumber": "0325040396542504",
+    "Identifiant 1": "FK-169-EF",
+    "Identifiant 2": "FIBLEUIL",
+    "Identifiant 3": "FK-169-EF",
+    "Immatriculation": "FK-169-EF",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000136",
+    "serialNumber": "0325040396532504",
+    "Identifiant 1": "EH-265-SE",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "EH-265-SE",
+    "Immatriculation": "EH-265-SE",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000144",
+    "serialNumber": "0325040396522504",
+    "Identifiant 1": "EH-642-DH",
+    "Identifiant 2": "NOEL",
+    "Identifiant 3": "EH-642-DH",
+    "Immatriculation": "EH-642-DH",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000151",
+    "serialNumber": "0325040396512504",
+    "Identifiant 1": "EJ-985-SZ",
+    "Identifiant 2": "DCI-IT",
+    "Identifiant 3": "EJ-985-SZ",
+    "Immatriculation": "EJ-985-SZ",
+    "Service": "DCI-IT",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000169",
+    "serialNumber": "0325040396492504",
+    "Identifiant 1": "CA-798-QY",
+    "Identifiant 2": "DCI-IT",
+    "Identifiant 3": "CA-798-QY",
+    "Immatriculation": "CA-798-QY",
+    "Service": "DCI-IT",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000177",
+    "serialNumber": "0325040396502504",
+    "Identifiant 1": "GD-474-QR",
+    "Identifiant 2": "DCI-IT",
+    "Identifiant 3": "GD-474-QR",
+    "Immatriculation": "GD-474-QR",
+    "Service": "DCI-IT",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000185",
+    "serialNumber": "0325040396482504",
+    "Identifiant 1": "FT-385-MP",
+    "Identifiant 2": "DCI-IT",
+    "Identifiant 3": "FT-385-MP",
+    "Immatriculation": "FT-385-MP",
+    "Service": "DCI-IT",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000193",
+    "serialNumber": "0325040396472504",
+    "Identifiant 1": "EN-585-ST",
+    "Identifiant 2": "DCI-IT",
+    "Identifiant 3": "EN-585-ST",
+    "Immatriculation": "EN-585-ST",
+    "Service": "DCI-IT",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000201",
+    "serialNumber": "0325040396462504",
+    "Identifiant 1": "EZ-769-BQ",
+    "Identifiant 2": "SICOP",
+    "Identifiant 3": "EZ-769-BQ",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000219",
+    "serialNumber": "0325040396452504",
+    "Identifiant 1": "",
+    "Identifiant 2": "SICOP",
+    "Identifiant 3": "SICOP",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000227",
+    "serialNumber": "0325040396412504",
+    "Identifiant 1": "GB-036-KE",
+    "Identifiant 2": "SNEAV",
+    "Identifiant 3": "GB-036-KE",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000235",
+    "serialNumber": "0325040396422504",
+    "Identifiant 1": "GB-294-CV",
+    "Identifiant 2": "SNEAV",
+    "Identifiant 3": "GB-294-CV",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000243",
+    "serialNumber": "0325040396382504",
+    "Identifiant 1": "GB-722-CR",
+    "Identifiant 2": "SNEAV",
+    "Identifiant 3": "GB-722-CR",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000250",
+    "serialNumber": "0325040396392504",
+    "Identifiant 1": "UCGE-VL1",
+    "Identifiant 2": "D CAFFIN",
+    "Identifiant 3": "UCGE-VL1",
+    "Immatriculation": "DM-499-PV",
+    "Service": "CRS",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000268",
+    "serialNumber": "0325040396372504",
+    "Identifiant 1": "UCGE-VL2",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "UCGE-VL2",
+    "Immatriculation": "HP",
+    "Service": "UCGE",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000276",
+    "serialNumber": "0325040396172504",
+    "Identifiant 1": "UCGE-VL3",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "UCGE-VL3",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000284",
+    "serialNumber": "0325040396202504",
+    "Identifiant 1": "UCGE-VL4",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "UCGE-VL4",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000292",
+    "serialNumber": "0325040396432504",
+    "Identifiant 1": "UCGE-VL5",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "UCGE-VL5",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000300",
+    "serialNumber": "0325040396442504",
+    "Identifiant 1": "UCGE-VL6",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "UCGE-VL6",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000318",
+    "serialNumber": "0325040396332504",
+    "Identifiant 1": "UCGE-VL7",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "UCGE-VL7",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000326",
+    "serialNumber": "0325040396362504",
+    "Identifiant 1": "UCGE-VL8",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "UCGE-VL8",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000334",
+    "serialNumber": "0325040396342504",
+    "Identifiant 1": "UCGE-VL9",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "UCGE-VL9",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000342",
+    "serialNumber": "0325040396402504",
+    "Identifiant 1": "UCGE-VL10",
+    "Identifiant 2": "UCGE",
+    "Identifiant 3": "UCGE-VL10",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000359",
+    "serialNumber": "0325040396242504",
+    "Identifiant 1": "HP01",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP01",
+    "Immatriculation": "FK-232-EF",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000367",
+    "serialNumber": "0325040396322504",
+    "Identifiant 1": "HP02",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP02",
+    "Immatriculation": "GD-402-HD",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000375",
+    "serialNumber": "0325040396352504",
+    "Identifiant 1": "HP03",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP03",
+    "Immatriculation": "FT-080-TS",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000383",
+    "serialNumber": "0325040396282504",
+    "Identifiant 1": "HP04",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP04",
+    "Immatriculation": "GD-439-HD",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000391",
+    "serialNumber": "0325040396302504",
+    "Identifiant 1": "HP05",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP05",
+    "Immatriculation": "ER-124-YK",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000409",
+    "serialNumber": "0325040396292504",
+    "Identifiant 1": "HP06",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP06",
+    "Immatriculation": "FV-066-JF",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000417",
+    "serialNumber": "0325040396312504",
+    "Identifiant 1": "HP07",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP07",
+    "Immatriculation": "DCI-IT",
+    "Service": "DCI-IT",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000425",
+    "serialNumber": "0325040396272504",
+    "Identifiant 1": "HP08",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP08",
+    "Immatriculation": "DCI-IT",
+    "Service": "DCI-IT",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000433",
+    "serialNumber": "0325040396222504",
+    "Identifiant 1": "HP09",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP09",
+    "Immatriculation": "FE-032-ZE",
+    "Service": "CONSEIL AERO",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000441",
+    "serialNumber": "0325040396182504",
+    "Identifiant 1": "HP10",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP10",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000458",
+    "serialNumber": "0325040396212504",
+    "Identifiant 1": "HP11",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP11",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000466",
+    "serialNumber": "0325040396252504",
+    "Identifiant 1": "HP12",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP12",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000474",
+    "serialNumber": "0325040396262504",
+    "Identifiant 1": "HP13",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP13",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000482",
+    "serialNumber": "0325040396232504",
+    "Identifiant 1": "HP14",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP14",
+    "Immatriculation": "GB-715-VA",
+    "Service": "DGPN CABINET",
+    "Attribution": true
+  },
+  {
+    "badgeNumber": "0250093599262000490",
+    "serialNumber": "0325040396192504",
+    "Identifiant 1": "HP15",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP15",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000508",
+    "serialNumber": "0325040390972504",
+    "Identifiant 1": "HP16",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP16",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000516",
+    "serialNumber": "0325040390982504",
+    "Identifiant 1": "HP17",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP17",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000524",
+    "serialNumber": "0325040390992504",
+    "Identifiant 1": "HP18",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP18",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000532",
+    "serialNumber": "0325040391002504",
+    "Identifiant 1": "HP19",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP19",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000540",
+    "serialNumber": "0325040390932504",
+    "Identifiant 1": "HP20",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP20",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000557",
+    "serialNumber": "0325040390952504",
+    "Identifiant 1": "HP21",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP21",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000565",
+    "serialNumber": "0325040390942504",
+    "Identifiant 1": "HP22",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP22",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000573",
+    "serialNumber": "0325040390962504",
+    "Identifiant 1": "HP23",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP23",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000581",
+    "serialNumber": "0325040390922504",
+    "Identifiant 1": "HP24",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP24",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000599",
+    "serialNumber": "0325040390912504",
+    "Identifiant 1": "HP25",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP25",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  },
+  {
+    "badgeNumber": "0250093599262000607",
+    "serialNumber": "0325040390902504",
+    "Identifiant 1": "HP26",
+    "Identifiant 2": "POOL CABINET",
+    "Identifiant 3": "HP26",
+    "Immatriculation": "",
+    "Service": "",
+    "Attribution": false
+  }
+]

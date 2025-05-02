@@ -42,9 +42,12 @@ final class ReservationController extends AbstractController
         
         $form->handleRequest($request);
         
+       
+
+
         if ($form->isSubmitted() && $form->isValid()) {
 
-           
+          
             
             // Vérifier que la date de fin est après la date de début
             if ($reservation->getEndDate() <= $reservation->getStartDate()) {
@@ -70,6 +73,7 @@ final class ReservationController extends AbstractController
         return $this->render('vehicule/reservation/new.html.twig', [
             'form' => $form->createView(),
             'titre' => 'Nouvelle réservation',
+            
         ]);
     }
     
