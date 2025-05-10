@@ -1,54 +1,63 @@
-{% extends "base.html.twig"%}
+{% extends "base.html.twig" %}
 
 {% block body %}
 
-	<div class="main-content-accueil">
+    <div class="main-content-accueil">
 
-		<div class="row ">
-			<nav class="main-nav">
-				<div class="nav-card" onclick="window.location='{{path('app_vehicle')}}'">
-					<img style="margin-bottom: 1rem;" src="{{ asset('icons/car.svg') }}" alt="Icône voiture" width="60" height="50">
+        <div class="row ">
+            <nav class="main-nav">
+                <div class="nav-card" onclick="window.location='{{ path('app_vehicle') }}'">
+                    <img style="margin-bottom: 1rem;" src="{{ asset('icons/car.svg') }}" alt="Icône voiture" width="60"
+                         height="50">
 
-					<h3>PARC AUTOMOBILE</h3>
-					
-				</div>
+                    <h3>PARC AUTOMOBILE</h3>
 
-				<div class="nav-card" onclick="window.location='{{path('reservation_index')}}'">
-					<img style="margin-bottom: 1rem;" src="{{ asset('icons/calendar.svg') }}" alt="Icône agenda" width="60" height="50">
-					<h3>RÉSERVATION VEHICULE</h3>
-					
-				</div>
+                </div>
 
-				<div class="nav-card">
-					<img style="margin-bottom: 1rem;" src="{{ asset('icons/box-open.svg') }}" alt="Icône box" width="60" height="50">
-					<h3>GESTION FOURNITURES</h3>
-				</div>
+                <div class="nav-card" onclick="window.location='{{ path('reservation_index') }}'">
+                    <img style="margin-bottom: 1rem;" src="{{ asset('icons/calendar.svg') }}" alt="Icône agenda"
+                         width="60" height="50">
+                    <h3>RÉSERVATION VEHICULE</h3>
 
-				<div class="nav-card">
-					<img style="margin-bottom: 1rem;" src="{{ asset('icons/gun.svg') }}" alt="Icône gun" width="60" height="50">
-					<h3>GESTION DES ARMES</h3>
-				</div>
+                </div>
 
-				<div class="nav-card">
-					<img style="margin-bottom: 1rem;" src="{{ asset('icons/t-shirt.svg') }}" alt="Icône t-shirt" width="60" height="50">
-					<h3>HABILLEMENT</h3>
-				</div>
+                <div class="nav-card">
+                    <img style="margin-bottom: 1rem;" src="{{ asset('icons/box-open.svg') }}" alt="Icône box" width="60"
+                         height="50">
+                    <h3>GESTION FOURNITURES</h3>
+                </div>
 
-				<div class="nav-card">
-					<img style="margin-bottom: 1rem;" src="{{ asset('icons/card.svg') }}" alt="Icône t-shirt" width="60" height="50">
-					<h3>CARTE CARBURANT</h3>
+                <div class="nav-card">
+                    <img style="margin-bottom: 1rem;" src="{{ asset('icons/gun.svg') }}" alt="Icône gun" width="60"
+                         height="50">
+                    <h3>GESTION DES ARMES</h3>
+                </div>
 
-				</div><div class="nav-card">
-					<img style="margin-bottom: 1rem;" src="{{ asset('icons/hightway.svg') }}" alt="Icône t-shirt" width="60" height="50">
-					<h3>BADGE AUTOROUTE</h3>
-				</div>
+                <div class="nav-card">
+                    <img style="margin-bottom: 1rem;" src="{{ asset('icons/t-shirt.svg') }}" alt="Icône t-shirt"
+                         width="60" height="50">
+                    <h3>HABILLEMENT</h3>
+                </div>
 
-				<div class="nav-card">
-					<img style="margin-bottom: 1rem;" src="{{ asset('icons/hand.svg') }}" alt="Icône hand" width="60" height="50">
-					<h3>PRÊT</h3>
-				</div>
-			</nav>
-		</div>
-	</div>
+                <div class="nav-card" onclick="window.location='{{ path('app_visa_cards') }}'">
+                    <img style="margin-bottom: 1rem;" src="{{ asset('icons/card.svg') }}" alt="Icône t-shirt" width="60"
+                         height="50">
+                    <h3>CARTE CARBURANT</h3>
+
+                </div>
+                <div class="nav-card" onclick="window.location='{{ path('app_badges') }}'">
+                    <img style="margin-bottom: 1rem;" src="{{ asset('icons/hightway.svg') }}" alt="Icône t-shirt"
+                         width="60" height="50">
+                    <h3>BADGE AUTOROUTE</h3>
+                </div>
+
+                <div class="nav-card">
+                    <img style="margin-bottom: 1rem;" src="{{ asset('icons/hand.svg') }}" alt="Icône hand" width="60"
+                         height="50">
+                    <h3>PRÊT</h3>
+                </div>
+            </nav>
+        </div>
+    </div>
 
 {% endblock %}

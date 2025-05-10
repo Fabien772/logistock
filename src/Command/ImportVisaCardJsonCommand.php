@@ -49,9 +49,10 @@ class ImportVisaCardJsonCommand extends Command
             if ($chaine != null) {
                 $visaCard->setImmatriculation($partie1 . '-' . $partie2 . '-' . $partie3);
             }
-            $visaCard->setDesactived($item['desactived'] ?? false);
-            $status = $item['Status'] === "Activée" ? $item['Status'] : "";
-            $visaCard->setStatus($status);
+            $visa = empty($item['desactived']) ? false : true;
+            $visaCard->setActived($visa);
+            $attribution = empty($item['desactived']) ? false: true;
+            $visaCard->setAttribution($attribution);
 
             // Conversion des dates avec validation
             $dateAttrib = !empty($item['Attribution']) ? \DateTime::createFromFormat('d/m/y', $item['Attribution']) : null;

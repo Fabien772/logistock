@@ -40,6 +40,9 @@ class Badge
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $situation = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $pret = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -149,6 +152,18 @@ class Badge
     public function setSituation(?string $situation): static
     {
         $this->situation = $situation;
+
+        return $this;
+    }
+
+    public function isPret(): ?bool
+    {
+        return $this->pret;
+    }
+
+    public function setPret(?bool $pret): static
+    {
+        $this->pret = $pret;
 
         return $this;
     }

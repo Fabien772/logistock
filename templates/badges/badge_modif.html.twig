@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+	Modification d'un véhicule
+{% endblock %}
+
+
+{% block body %}
+<div class="main-content-accueil">
+	<div class="container">
+		<div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+
+		{{ form_start(form) }}
+		<div class="row row-custom-bg p-3 mb-2  bg-gradient text-white rounded-3">
+
+
+			<div class="col-md-6">{{form_row(form.badgeNumber)}}</div>
+			<div class="col-md-6">{{form_row(form.serialNumber)}}</div>
+			<div class="col-md-6">{{form_row(form.Identifiant1)}}</div>
+			<div class="col-md-6">{{form_row(form.Identifiant2)}}</div>
+
+			<div class="col-md-6">{{form_row(form.Identifiant3)}}</div>
+			<div class="col-md-6">{{form_row(form.immatriculation)}}</div>
+			<div class="col-md-6">{{form_row(form.service)}}</div>
+			<div class="col-md-6">{{form_row(form.attribution)}}</div>
+			<div class="col-md-6">{{form_row(form.situation)}}</div>
+
+
+			
+
+
+		</div>
+
+		<div class="row ">
+			<div class="col-6 ">
+				<button type="submit" class="btn-pulse-modify w-100 alert alert-info">Enregistrer les modifications</button>
+			</div>
+
+
+			<!-- Button trigger modal avec confirmation de suppression -->
+
+			<div class="col-6">
+				<button type="button" class="col btn-pulse-delete w-100 col  alert alert-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					Supprimer le badge
+				</button>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel">Voulez-vous vraiment supprimer le badge
+						</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						{{badge.Identifiant1}}
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+						<a class="btn btn-outline-danger" type="link" href="{{path('app_badge_suppr',{'id':badge.id})}}">Confirmer</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Fin du modal -->
+
+
+		{{ form_end(form) }}
+
+	</div>
+</div>
+
+{% endblock %}

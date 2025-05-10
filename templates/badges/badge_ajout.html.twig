@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}create badge
+{% endblock %}
+
+
+{% block body %}
+    <div class="main-content-accueil">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+
+            {{ form_start(form) }}
+            <div class="row  row-custom-bg p-3 mb-2 bg-gradient  text-white rounded-3">
+
+
+                <div class="col-md-6">{{form_row(form.badgeNumber)}}</div>
+                <div class="col-md-6">{{form_row(form.serialNumber)}}</div>
+                <div class="col-md-6">{{form_row(form.Identifiant1)}}</div>
+                <div class="col-md-6">{{form_row(form.Identifiant2)}}</div>
+
+                <div class="col-md-6">{{form_row(form.Identifiant3)}}</div>
+                <div class="col-md-6">{{form_row(form.immatriculation)}}</div>
+                <div class="col-md-6">{{form_row(form.service)}}</div>
+                <div class="col-md-6">{{form_row(form.attribution)}}</div>
+                <div class="col-md-6">{{form_row(form.situation)}}</div>
+
+            </div>
+
+
+            <div class="row ">
+                <div class="col">
+                    <button type="submit" class="btn-pulse-modify w-100 alert alert-info">Enregistrer</button>
+                </div>
+                <div class="col">
+                    <button onclick="window.location.href='{{path('app_badges')}}'" class="col btn-pulse-delete  col  alert alert-danger w-100">Annuler</button>
+                </div>
+
+
+            </div>
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+{% endblock %}

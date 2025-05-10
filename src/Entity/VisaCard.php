@@ -27,22 +27,25 @@ class VisaCard
     private ?string $immatriculation = null;
 
     #[ORM\Column]
-    private ?bool $desactived = null;
+    private ?bool $actived = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $status = null;
+    #[ORM\Column]
+    private ?bool $attribution = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $DateAttrib = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $activatedOn = null;
+    private ?\DateTimeInterface $dateActivate = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $archivingDate = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $comment = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $pret = null;
 
     public function getId(): ?int
     {
@@ -97,26 +100,26 @@ class VisaCard
         return $this;
     }
 
-    public function isDesactived(): ?bool
+    public function isactived(): ?bool
     {
-        return $this->desactived;
+        return $this->actived;
     }
 
-    public function setDesactived(bool $desactived): static
+    public function setActived(bool $actived): static
     {
-        $this->desactived = $desactived;
+        $this->actived = $actived;
 
         return $this;
     }
 
-    public function getStatus(): ?string
+    public function getAttribution(): ?bool
     {
-        return $this->status;
+        return $this->attribution;
     }
 
-    public function setStatus(string $status): static
+    public function setAttribution(bool $attribution): static
     {
-        $this->status = $status;
+        $this->attribution = $attribution;
 
         return $this;
     }
@@ -133,14 +136,14 @@ class VisaCard
         return $this;
     }
 
-    public function getActivatedOn(): ?\DateTimeInterface
+    public function getDateActivate(): ?\DateTimeInterface
     {
-        return $this->activatedOn;
+        return $this->dateActivate;
     }
 
-    public function setActivatedOn(?\DateTimeInterface $activatedOn): static
+    public function setDateActivate(?\DateTimeInterface $dateActivate): static
     {
-        $this->activatedOn = $activatedOn;
+        $this->dateActivate = $dateActivate;
 
         return $this;
     }
@@ -165,6 +168,18 @@ class VisaCard
     public function setComment(?string $comment): static
     {
         $this->comment = $comment;
+
+        return $this;
+    }
+
+    public function isPret(): ?bool
+    {
+        return $this->pret;
+    }
+
+    public function setPret(?bool $pret): static
+    {
+        $this->pret = $pret;
 
         return $this;
     }

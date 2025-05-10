@@ -54,9 +54,9 @@
 
 
 						<div class="col ">
-							{% if vehicle_create is defined %}
+							{% if create is defined %}
 								<h7 class="btn-pulse-create border border-light rounded-pill p-2 ">
-									<a class="text-decoration-none text-white" href="{{path('app_create_vehicle')}}">Ajouter un véhicule<img src="{{ asset('icons/plus.svg') }}" alt="Icône + " width="40" height="20"></a>
+									<a class="text-decoration-none text-white" href="{{pathCreate}}">{{ create }}<img src="{{ asset('icons/plus.svg') }}" alt="Icône + " width="40" height="20"></a>
 								</h7>
 							{% endif %}
 

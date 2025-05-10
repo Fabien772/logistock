@@ -34,7 +34,7 @@ class ReservationType extends AbstractType
                 'widget' => 'single_text',
                 'required' => true,
                 'html5' => true,
-                'attr' => ['class' => 'js-datepicker', 'placeholder' => 'Champ obligatoire'],
+                'attr' => ['class' => 'js-datepicker', 'placeholder' => 'Champ obligatoire',],
             ])
             ->add('endDate', DateTimeType::class, [
                 'label' => 'Date de fin',

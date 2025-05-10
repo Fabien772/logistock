@@ -22,7 +22,8 @@ final class VehiculeController extends AbstractController
         return $this->render('vehicule/vehicles.html.twig', [
             'vehicles' => $vehicles,
             'titre' => "Parc automobile",
-            'vehicle_create' => "Créer un véhicule" // pour afficher le bouton dans le base.html.twig
+            'create' => "Ajouter un véhicule" ,// pour afficher le bouton dans le base.html.twig
+            'pathCreate' => $this->generateUrl('app_create_vehicle') // pour afficher le bouton 'Ajouter' dans le base.html.twig
             
         ]);
     }
